@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIEC - Sistemas y Soluciones Integrales</title>
+
+<style>
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    z-index:5;
+}
+
+.nav-menu{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-menu li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    letter-spacing:.5px;
+    position:relative;
+    transition:.3s ease;
+}
+
+.nav-menu li a:hover{
+    text-shadow:0 0 6px rgba(255,255,255,.6),
+               0 0 12px rgba(255,255,255,.3);
+}
+
+.nav-menu li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:1px;
+    background:rgba(255,255,255,.8);
+    transition:.3s ease;
+}
+
+.nav-menu li a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background:url("ChatGPT Image 4 feb 2026, 09_29_30 a.m..png") center/cover no-repeat;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,
+        rgba(71,110,186,.75),
+        rgba(33,150,243,.75)
+    );
+    opacity:.7;
+}
+
+/* LOGO */
+.logo-top-left{
+    position:fixed;
+    top:20px;
+    left:30px;
+    z-index:999;
+}
+
+.logo-top-left img{
+    height:200px;
+}
+
+/* SOBRE NOSOTROS */
+.dark-section{
+    background:#80CAFF;
+    color:#fff;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.dark-section h2{
+    color:#476EBA;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.dark-section p{
+    max-width:900px;
+    margin:0 auto;
+    line-height:1.8;
+}
+p {
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* FRANJA */
+.yellow-bar{
+    background:#0079CF;
+    height:80px;
+}
+
+/* SERVICIOS */
+.services{
+    background:#2c3e50;
+    padding:80px 20px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.service-item{
+    text-align:center;
+    color:#fff;
+}
+
+/* ===================== */
+/* FOOTER CIRCULAR FIXED */
+/* ===================== */
+
+.footer-sieco{
+    background:#f5f7fa;
+    padding:100px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.circle-container{
+    position:relative;
+    width:520px;
+    height:520px;
+}
+
+.circle-container::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:420px;
+    height:420px;
+    transform:translate(-50%,-50%);
+    border:2px dashed #f4c430;
+    border-radius:50%;
+}
+
+.circle-center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:160px;
+    height:160px;
+    background:#0b4fa3;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    animation:pulse 4s infinite;
+}
+
+.circle-center img{
+    width:110px;
+}
+
+@keyframes pulse{
+    0%,100%{ box-shadow:0 0 25px rgba(11,79,163,.4);}
+    50%{ box-shadow:0 0 45px rgba(11,79,163,.8);}
+}
+
+@keyframes orbit{
+    from{ transform:rotate(0deg) translateX(210px) rotate(0deg);}
+    to{ transform:rotate(360deg) translateX(210px) rotate(-360deg);}
+}
+
+.circle-item{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:120px;
+    height:120px;
+    margin:-60px;
+    background:#fff;
+    border:4px solid #1e88e5;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:12px;
+    font-weight:600;
+    color:#0b4fa3;
+    animation:orbit 60s linear infinite;
+}
+
+.circle-item img{
+    width:42px;
+    margin-bottom:6px;
+}
+
+/* 8 ITEMS */
+.item1{animation-delay:0s}
+.item2{animation-delay:-7.5s}
+.item3{animation-delay:-15s}
+.item4{animation-delay:-22.5s}
+.item5{animation-delay:-30s}
+.item6{animation-delay:-37.5s}
+.item7{animation-delay:-45s}
+.item8{animation-delay:-52.5s}
+
+@media(max-width:600px){
+    .circle-container{width:320px;height:320px}
+    .circle-item{width:90px;height:90px;font-size:10px;margin:-45px}
+    .circle-center{width:120px;height:120px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo-top-left">
+    <img src="ChatGPT Image 4 feb 2026, 10_50_44 a.m..png">
+</div>
+
+<section class="hero">
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="C:\Users\digit\Desktop\SIEC\SIECMAIN.html">Inicio</a></li>
+            <li><a href="C:\Users\digit\Desktop\SIEC\SIECSOLUCIONES.html">Soluciones En Agua</a></li>
+            <li><a href="C:\Users\digit\Desktop\SIEC\SIECELECTRICO.html">Control Eléctrico</a></li>
+            <li><a href="C:\Users\digit\Desktop\SIEC\SIECREFRIGERACION.html">Refrigeración</a></li>
+            <li><a href="C:\Users\digit\Desktop\SIEC\MANTENIMIENTO.html">Mantenimiento</a></li>
+            <li><a href="C:\Users\digit\Desktop\SIEC\PROYECTOS.html">Proyectos</a></li>
+            <li><a href="C:\Users\digit\Desktop\SIEC\BLOG.html">Blog</a></li>
+            <li><a href="C:\Users\digit\Desktop\SIEC\CONTACTO.html">Contacto</a></li>
+        </ul>
+    </nav>
+</section>
+
+<section class="dark-section">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      Somos un equipo multidisciplinario de profesionales capacitados y con una amplia experiencia en el diseño e implementación de soluciones integrales para
+el tratamiento y filtración del agua, control eléctrico, sistemas de refrigeración y aire acondicionado. Nos dedicamos a ofrecer soluciones innovadoras
+adaptadas a las necesidades y procesos de los sectores industriales, comerciales y residenciales.
+
+Con presencia en Ciudad de México y Querétaro, nos caracterizamos por brindar una atención cercana y personalizada a nuestros clientes, estableciendo
+relaciones de confianza a largo plazo. Nuestra misión es contribuir al éxito de cada proyecto, a cada proceso y a cada necesidad especifica proporcionando
+soluciones eficientes que no solo cumplen con los estándares de calidad, sino que también se alinean con los objetivos y exigencias del mercado actual.  
+    </p>
+</section>
+
+<div class="yellow-bar"></div>
+
+<section class="services">
+    <div class="service-item">💧 Tratamiento de Agua</div>
+    <div class="service-item">⚙️ Mantenimiento</div>
+    <div class="service-item">🔬 Laboratorio</div>
+    <div class="service-item">🏭 Consultoría</div>
+</section>
+
+<footer class="footer-sieco">
+    <div class="circle-container">
+
+        <div class="circle-center">
+            <img src="ChatGPT Image 4 feb 2026, 10_50_44 a.m..png">
+        </div>
+
+        <div class="circle-item item1">Agua Residual</div>
+        <div class="circle-item item2">Ósmosis</div>
+        <div class="circle-item item3">Desinfección</div>
+        <div class="circle-item item4">Filtración</div>
+        <div class="circle-item item5">Comercial</div>
+        <div class="circle-item item6">Resinas</div>
+        <div class="circle-item item7">Ultrafiltración</div>
+        <div class="circle-item item8">Aire</div>
+
+    </div>
+</footer>
+
+</body>
+</html>

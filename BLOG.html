@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | SIEC - Sistemas y Soluciones Integrales</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f8fc;
+    color:#2c3e50;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#476EBA,#2196F3);
+    padding:30px 40px;
+    position:relative;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:bold;
+    color:#fff;
+}
+
+/* NAV */
+nav{
+    margin-top:15px;
+}
+
+.nav-menu{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.nav-menu a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.nav-menu a:hover{
+    text-shadow:0 0 6px rgba(255,255,255,.7);
+}
+
+/* BLOG HERO */
+.blog-hero{
+    padding:80px 20px;
+    text-align:center;
+    background:#80CAFF;
+}
+
+.blog-hero h1{
+    font-size:2.5rem;
+    color:#0b4fa3;
+    margin-bottom:15px;
+}
+
+.blog-hero p{
+    max-width:700px;
+    margin:0 auto;
+    line-height:1.7;
+    font-weight:bold;
+}
+
+/* BLOG CONTAINER */
+.blog-container{
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+/* BLOG CARD */
+.blog-card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.blog-card:hover{
+    transform:translateY(-6px);
+}
+
+/* BLOG IMAGE */
+.blog-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* BLOG CONTENT */
+.blog-content{
+    padding:25px;
+}
+
+.blog-content h2{
+    font-size:1.3rem;
+    color:#0b4fa3;
+    margin-bottom:12px;
+}
+
+.blog-content p{
+    font-size:.95rem;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+/* READ MORE */
+.read-more{
+    display:inline-block;
+    text-decoration:none;
+    color:#0079CF;
+    font-weight:bold;
+    font-size:.9rem;
+}
+
+.read-more:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+    background:#2c3e50;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:80px;
+    font-size:.85rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    .blog-hero h1{
+        font-size:2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SIEC</div>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Soluciones en Agua</a></li>
+            <li><a href="#">Mantenimiento</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="blog-hero">
+    <h1>Blog Técnico SIEC</h1>
+    <p>
+    Conocimiento que fluye. Artículos técnicos, mantenimiento industrial y
+    soluciones reales para sistemas de agua y procesos críticos.
+    </p>
+</section>
+
+<section class="blog-container">
+
+    <!-- POST 1 -->
+    <article class="blog-card">
+        <img src="images/blog-osmosis.jpg" alt="">
+        <div class="blog-content">
+            <h2>Mantenimiento de sistemas de ósmosis inversa</h2>
+            <p>
+            Un mantenimiento preventivo adecuado garantiza agua de calidad,
+            eficiencia operativa y mayor vida útil del sistema.
+            </p>
+            <a href="osmosis.html" class="read-more">Leer artículo →</a>
+        </div>
+    </article>
+
+    <!-- POST 2 -->
+    <article class="blog-card">
+        <img src="images/blog-filtration.jpg" alt="">
+        <div class="blog-content">
+            <h2>Importancia de la filtración industrial</h2>
+            <p>
+            La filtración correcta protege equipos, reduce costos y mejora la
+            calidad del proceso productivo.
+            </p>
+            <a href="#" class="read-more">Leer artículo →</a>
+        </div>
+    </article>
+
+    <!-- POST 3 -->
+    <article class="blog-card">
+        <img src="images/blog-maintenance.jpg" alt="">
+        <div class="blog-content">
+            <h2>Mantenimiento preventivo vs correctivo</h2>
+            <p>
+            Anticiparse a las fallas siempre será más rentable que reaccionar
+            cuando el daño ya está hecho.
+            </p>
+            <a href="#" class="read-more">Leer artículo →</a>
+        </div>
+    </article>
+
+</section>
+
+<footer>
+    © 2026 SIEC – Sistemas y Soluciones Integrales
+</footer>
+
+</body>
+</html>
